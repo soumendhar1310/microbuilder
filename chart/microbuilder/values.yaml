@@ -3,8 +3,9 @@
 replicaCount: 1
 revisionHistoryLimit: 1
 image:
-  repository: microbuilder
-  tag: v1.0.0
+  repository: soumendhar1310/microbuilder
+  #tag: v1.0.0
+  tag: latest
   pullPolicy: IfNotPresent
   resources:
     requests:

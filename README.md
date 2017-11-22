@@ -1,5 +1,5 @@
 ## Microservice
-IBM Cloud Microservice Starter for Spring
+IBM Cloud Microservice Starter for Spring testing CICD
 
 [![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
 [![Platform](https://img.shields.io/badge/platform-java-lightgrey.svg?style=flat)](https://www.ibm.com/developerworks/learn/java/)

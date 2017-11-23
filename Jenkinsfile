@@ -15,8 +15,17 @@ podTemplate(label: 'mypod', containers: [
     stage 'Get a Maven project'
     git url: 'https://github.com/soumendhar1310/microbuilder.git', credentialsId: '0a0a9295-4198-4061-a165-1450ef931895', branch: 'master'
     container('maven') {
+    
+      stage('Test') {
+            //def pom = readMavenPom file: 'pom.xml'
+            //print "Build: " + pom.version
+            //env.POM_VERSION = pom.version
+            sh 'mvn clean test -Dmaven.test.failure.ignore=true'
+            junit '**/target/surefire-reports/TEST-*.xml'
+            //currentBuild.description = "v${pom.version} (${env.branch})"
+     }
       stage 'Build a Maven project'
-      sh 'mvn clean install'
+      sh 'mvn clean install -Dmaven.test.skip=true'
     }
    
     container('docker') {

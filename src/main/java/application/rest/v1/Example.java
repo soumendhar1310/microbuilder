@@ -16,7 +16,7 @@ public class Example {
   public @ResponseBody ResponseEntity<String> example() {
     List<String> list = new ArrayList<>();
     //return a simple list of strings
-    list.add("Congratulations, your application is up and running with CICD with Git update post helm");
+    list.add("Congratulations, your application is up and running");
     return new ResponseEntity<String>(list.toString(), HttpStatus.OK);
   }
 

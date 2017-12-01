@@ -26,7 +26,7 @@ public class Example {
     //list.add("Congratulations, your application is up and running");
     //return new ResponseEntity<String>(list.toString(), HttpStatus.OK);
     Map<String,String> result = new HashMap<>();
-	result.put("message", "Congratulations, your application is up and running");
+	result.put("message", "Congratulations, your application is up and running after setting up new");
 	return result;
   }
 

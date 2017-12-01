@@ -13,7 +13,7 @@ podTemplate(label: 'mypod', containers: [
     def K8S_DEPLOYMENT_NAME = 'microbuilder'
       
     stage 'Get a Maven project'
-    git url: 'https://github.com/soumendhar1310/microbuilder.git', credentialsId: '0a0a9295-4198-4061-a165-1450ef931895', branch: 'master'
+    git url: 'https://github.com/soumendhar1310/microbuilder.git', credentialsId: '7fbd83c5-014d-45fb-93c0-3b160e9e1bf3', branch: 'master'
     container('maven') {
     
       stage('Test') {

@@ -25,12 +25,12 @@ podTemplate(label: 'mypod', containers: [
             //currentBuild.description = "v${pom.version} (${env.branch})"
      }
      
-     /*stage('QA') {
+     stage('QA') {
     
         withSonarQubeEnv('sonar') {
                 sh 'mvn sonar:sonar -Dsonar.host.url=http://172.30.180.231:9000'
         }
-    }*/
+    }
      
       stage 'Build a Maven project'
       sh 'mvn clean install -Dmaven.test.skip=true'

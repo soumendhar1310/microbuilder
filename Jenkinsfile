@@ -25,7 +25,7 @@ podTemplate(label: 'mypod', containers: [
             //currentBuild.description = "v${pom.version} (${env.branch})"
      }
      
-     stage('QA') {
+     /*stage('QA') {
     
         withSonarQubeEnv('sonar') {
                 sh 'mvn sonar:sonar -Dsonar.host.url=http://172.30.180.231:9000'
@@ -35,7 +35,7 @@ podTemplate(label: 'mypod', containers: [
       stage 'Build a Maven project'
       sh 'mvn clean install -Dmaven.test.skip=true'
     }
-   
+   */
     container('docker') {
                 stage('Docker Build & Push Current & Latest Versions') {
                     sh ("docker build -t ${DOCKER_HUB_ACCOUNT}/${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} .")

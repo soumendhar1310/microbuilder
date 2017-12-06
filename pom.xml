@@ -54,6 +54,19 @@
 			<version>2.6.1</version>
 			<scope>compile</scope>
 		</dependency>
+		
+		<!-- Added this dependency to test Logback -->
+		<dependency>
+  			<groupId>org.springframework.boot</groupId>
+  			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		
+		<dependency>
+  			<groupId>net.logstash.logback</groupId>
+  			<artifactId>logstash-logback-encoder</artifactId>
+  			<version>4.11</version>
+		</dependency>
+		
     </dependencies>
 
     <dependencyManagement>
